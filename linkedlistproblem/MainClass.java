@@ -11,4 +11,5 @@ public class MainClass {
 		linkedlist.add(56);
 		System.out.println(linkedlist);
 	}
+
 }
