@@ -16,5 +16,9 @@ public class MainClass {
 		linkedlist.insertAtMiddle(30, 2);
 		linkedlist.show();
 		System.out.println();
+		
+		linkedlist.pop();
+		linkedlist.show();
+		System.out.println();
 	}
 }

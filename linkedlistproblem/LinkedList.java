@@ -29,6 +29,7 @@ public class LinkedList {
 			tail = newNode;
 		}
 	}
+	
 	public void insertAtMiddle(int data, int position) {
 		Node temp;
 		int i;
@@ -59,6 +60,23 @@ public class LinkedList {
 		        }
 			}
 		}
+	
+	public void pop() {
+			Node temp;
+
+		    if(head == null)
+		    {
+		        System.out.println("List is already empty.");
+		    }
+		    else
+		    {
+		    	temp = head;
+		        head = head.next;
+
+		        System.out.println("\nData deleted " +temp.data);
+		        System.out.println("SUCCESSFULLY DELETED FIRST NODE FROM LIST\n");
+		    }
+	}
 	
 	public void show() {
 		Node temp = head;
