@@ -18,6 +18,7 @@ public class LinkedList {
 	}	
 	
 	public void append( int data) {
+		
 		Node newNode = new Node(data);
 		if(head == null) {
 		head = newNode;
@@ -28,6 +29,37 @@ public class LinkedList {
 			tail = newNode;
 		}
 	}
+	public void insertAtMiddle(int data, int position) {
+		Node temp;
+		int i;
+		Node newNode = new Node(data);
+		if (head == null) {
+			head = newNode;
+			tail = newNode;
+		} else {
+				newNode.data = data; 
+		        newNode.next = null;
+		        temp = head;
+
+		        for(i=2; i<=position-1; i++)
+		        {
+		            temp = temp.next;
+
+		            if(temp == null)
+		                break;
+		        }
+
+		        if(temp != null) {
+		            newNode.next = temp.next; 
+		            temp.next = newNode;
+		            System.out.println("DATA INSERTED SUCCESSFULLY\n");
+		        }
+		        else {
+		            System.out.println("UNABLE TO INSERT DATA AT THE GIVEN POSITION\n");
+		        }
+			}
+		}
+	
 	public void show() {
 		Node temp = head;
 		while (temp != null) {
