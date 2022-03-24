@@ -17,15 +17,19 @@ public class MainClass {
 		linkedlist.show();
 		System.out.println();
 		
-		linkedlist.insertAfterThiry(40, 3);
+		linkedlist.insertAfterThirty(40, 3);
 		linkedlist.show();
 		System.out.println();
 	
-		//linkedlist.pop();
-		linkedlist.popLast();
+//		linkedlist.pop();
+//		linkedlist.popLast();
+//		linkedlist.show();
+//		System.out.println();
+//		
+//		System.out.println(linkedlist.search(30));
+		
+		linkedlist.searchDelete(40);
 		linkedlist.show();
 		System.out.println();
-		
-		System.out.println(linkedlist.search(30));
 	}
 }

@@ -61,7 +61,7 @@ public class LinkedList {
 			}
 		}
 	
-	public void insertAfterThiry(int data, int position) {
+	public void insertAfterThirty(int data, int position) {
 		Node temp;
 		int i;
 		Node newNode = new Node(data);
@@ -120,6 +120,38 @@ public class LinkedList {
 	        System.out.println("SUCCESSFULLY DELETED LAST NODE FROM LIST\n");
 	    }
 
+	boolean searchDelete(int key)
+	{
+		boolean isFound = false;
+    	if(head == null) {
+			System.out.println("List is Empty!!");
+		}
+    	
+    	if(head.data == key) {
+    		head = head.next;
+    		return true;
+    	}
+    	
+		Node currentNode = head;
+		Node previousNode = null;
+		while(currentNode !=null) {
+			if(currentNode.data == key) {
+				isFound = true;
+				break;
+			}
+			previousNode = currentNode;
+			currentNode = currentNode.next;
+		}
+		if(currentNode == null) {
+			return isFound;
+		}
+		currentNode = previousNode.next;
+		previousNode.next = currentNode.next;
+		currentNode.next = null;
+		System.out.println("Data Is Deleted Sucessfully...");
+		return isFound;
+		
+	   }
 	
 	public void show() {
 		Node temp = head;
@@ -140,6 +172,7 @@ public class LinkedList {
 	    }
 	    		return false;
 	    }
+	
 }
 	
 
