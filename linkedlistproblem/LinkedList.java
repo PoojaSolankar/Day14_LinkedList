@@ -77,6 +77,17 @@ public class LinkedList {
 		        System.out.println("SUCCESSFULLY DELETED FIRST NODE FROM LIST\n");
 		    }
 	}
+	public void popLast() {
+		Node temp = head;
+		
+		while(temp.next.next!=null){
+			  temp = temp.next;
+			}
+			temp.next = null;
+	       // System.out.println("\nData deleted " +temp.data);
+	        System.out.println("SUCCESSFULLY DELETED LAST NODE FROM LIST\n");
+	    }
+
 	
 	public void show() {
 		Node temp = head;
@@ -86,3 +97,6 @@ public class LinkedList {
 		}
 	}
 }
+	
+
+
