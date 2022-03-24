@@ -96,6 +96,18 @@ public class LinkedList {
 		temp = temp.next;
 		}
 	}
+	
+	boolean search(int key)
+	{
+	    Node curNode = head;
+	    while (curNode != null)
+	    {
+	    	if(curNode.data == key) 
+	    		return true;
+	        	curNode = curNode.next;
+	    }
+	    		return false;
+	    }
 }
 	
 
