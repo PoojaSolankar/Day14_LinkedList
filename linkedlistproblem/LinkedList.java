@@ -4,18 +4,33 @@ public class LinkedList {
 	
 	Node head;
 	Node tail;
-	
-	public void add(int data) {
+	void add(int data) {
 		Node newNode = new Node(data);
-		if(head == null) {
-		head = newNode;
-		tail = newNode;
-		}
-		else{
-			tail.next = newNode;
-			tail = newNode;
-		}
-	}	
+	    Node current = head;
+	    Node previous = null;
+	    while(current != null && data > current.data){
+	      previous = current;
+	      current = current.next;
+	    }
+	    // insertion at beginning of the list
+	    if(previous == null){
+	      head = newNode;
+	    }else{
+	      previous.next = newNode;
+	    }
+	    newNode.next = current;
+	}
+	
+	int size() {
+		   Node temp=head;
+		   int count = 0;
+		   while(temp!=null)
+		   {
+		     temp=temp.next;
+		     count++; 
+		   }
+		   return count;
+	}
 	
 	public void append( int data) {
 		
